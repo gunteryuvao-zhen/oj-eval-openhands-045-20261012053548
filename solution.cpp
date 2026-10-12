@@ -1,7 +1,5 @@
 #include <cstdio>
 
-using namespace std;
-
 const int MAX_REQUESTS = 500000;
 
 // Min-heap for upward requests
@@ -352,13 +350,13 @@ public:
 
 int main() {
     int n;
-    scanf("%d", &n);
+    std::scanf("%d", &n);
     
     ElevatorSystem elevator;
     
     for (int i = 0; i < n; i++) {
         char command[20];
-        scanf("%s", command);
+        std::scanf("%s", command);
         
         if (command[0] == 'a' && command[1] == 'c') {
             // action
@@ -366,16 +364,16 @@ int main() {
         } else if (command[0] == 'a' && command[1] == 'd') {
             // add
             int x;
-            scanf("%d", &x);
+            std::scanf("%d", &x);
             elevator.add_request(x);
         } else if (command[0] == 'c') {
             // cancel
             int x;
-            scanf("%d", &x);
+            std::scanf("%d", &x);
             elevator.cancel_request(x);
         } else if (command[0] == 'l') {
             // locate
-            printf("%d\n", elevator.locate());
+            std::printf("%d\n", elevator.locate());
         }
     }
     
