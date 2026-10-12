@@ -1,6 +1,6 @@
 #include <cstdio>
 
-const int MAX_REQUESTS = 500000;
+#define MAX_REQUESTS 500000
 
 int up_requests[MAX_REQUESTS];
 int down_requests[MAX_REQUESTS];
